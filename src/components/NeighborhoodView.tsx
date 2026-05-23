@@ -196,7 +196,7 @@ export default function NeighborhoodView({
       <section className="bg-white border-t border-[#1A1A1A]/5 py-24">
         <div className="max-w-7xl mx-auto px-6">
           <div className="mb-12">
-            <span className="text-xs uppercase tracking-[0.2em] text-[#AF9164] font-semibold block">Aura Portfolio em Escopo</span>
+            <span className="text-xs uppercase tracking-[0.2em] text-[#AF9164] font-semibold block">Portfólio Tuanny Magalhães em Escopo</span>
             <h3 className="font-serif text-3xl font-light text-[#111111]">Imóveis Disponíveis no Bairro {bairro.nome}</h3>
             <p className="text-xs text-[#1A1A1A]/45 mt-1">Conheça as oportundiades off-market e ativas listadas em nosso banco:</p>
           </div>

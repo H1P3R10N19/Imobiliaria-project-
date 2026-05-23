@@ -40,7 +40,7 @@ export default function AboutView({ initialScrollToContact, onSubmitLead }: Abou
       nome,
       email,
       telefone,
-      mensagem: mensagem || 'Solicito contato confidencial para agendamento de consultoria de busca imobiliária premium (Aura).',
+      mensagem: mensagem || 'Solicito contato confidencial para agendamento de consultoria de busca imobiliária premium (Tuanny Magalhães).',
       origem: 'Formulário Contato Direto - Página Quem Somos'
     });
     setFormLoading(false);
@@ -66,12 +66,12 @@ export default function AboutView({ initialScrollToContact, onSubmitLead }: Abou
           className="absolute inset-0 w-full h-full object-cover opacity-80"
         />
         <div className="relative z-20 text-white max-w-2xl px-6 space-y-4">
-          <span className="text-xs uppercase tracking-[0.4em] text-[#E5D5C0] font-semibold block">Aura Imóveis Exclusivos</span>
+          <span className="text-xs uppercase tracking-[0.4em] text-[#E5D5C0] font-semibold block">Tuanny Magalhães Imóveis Exclusivos</span>
           <h1 className="text-4xl md:text-5xl font-serif text-white font-extralight tracking-wider">Governança Patrimonial</h1>
           <div className="w-12 h-[1px] bg-[#E5D5C0] mx-auto mt-4" />
         </div>
       </section>
-
+ 
       {/* Main content body (History & values) */}
       <section className="max-w-7xl mx-auto px-6 py-20 grid grid-cols-1 lg:grid-cols-12 gap-16 items-start">
         
@@ -80,12 +80,12 @@ export default function AboutView({ initialScrollToContact, onSubmitLead }: Abou
           <div className="space-y-3">
             <span className="text-xs uppercase tracking-[0.25em] text-[#AF9164] font-semibold block">Nossos Compromissos</span>
             <h2 className="text-2xl md:text-3.5xl font-serif font-light text-[#111111] leading-tight">
-              A Singularidade da Assessoria Premium Aura
+              A Singularidade da Assessoria Premium Tuanny Magalhães
             </h2>
           </div>
 
           <p className="text-sm text-[#1A1A1A]/75 leading-relaxed">
-            No mercado imobiliário tradicional de alto padrão, a quantidade de transações frequentemente atropela o refinamento e a discrição necessários para negócios de alta envergadura. A <strong>Aura Imóveis de Luxo</strong> foi modelada pelo conselheiro de patrimônios Carlos Albuquerque sob o pilar oposto: **a curadoria qualificada e escassa**.
+            No mercado imobiliário tradicional de alto padrão, a quantidade de transações frequentemente atropela o refinamento e a discrição necessários para negócios de alta envergadura. A <strong>Tuanny Magalhães Imóveis de Luxo</strong> foi modelada pelo conselheiro de patrimônios Carlos Albuquerque sob o pilar oposto: **a curadoria qualificada e escassa**.
           </p>
 
           <p className="text-sm text-[#1A1A1A]/75 leading-relaxed">
@@ -98,7 +98,7 @@ export default function AboutView({ initialScrollToContact, onSubmitLead }: Abou
           </blockquote>
 
           <p className="text-sm text-[#1A1A1A]/75 leading-relaxed">
-            Toda a nossa atuação é restrita por contratos de confidencialidade comercial ativa. Nenhuma transação ou acervo imobiliário administrado pela Aura é divulgado para imprensas de entretenimento, garantindo segurança patrimonial total e a paz de espírito necessária para o estabelecimento de governanças duradouras.
+            Toda a nossa atuação é restrita por contratos de confidencialidade comercial ativa. Nenhuma transação ou acervo imobiliário administrado por Tuanny Magalhães é divulgado para imprensas de entretenimento, garantindo segurança patrimonial total e a paz de espírito necessária para o estabelecimento de governanças duradouras.
           </p>
 
           {/* Pillars List */}

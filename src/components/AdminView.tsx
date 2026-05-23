@@ -104,7 +104,7 @@ export default function AdminView({
   const [bCategoria, setBCategoria] = useState('');
   const [bTags, setBTags] = useState<string[]>([]);
   const [newBTag, setNewBTag] = useState('');
-  const [bAutor, setBAutor] = useState('Aura Curadoria Editorial');
+  const [bAutor, setBAutor] = useState('Tuanny Magalhães Curadoria Editorial');
   const [bSEOtitle, setBSEOtitle] = useState('');
   const [bSEOdescription, setBSEOdescription] = useState('');
 
@@ -255,7 +255,7 @@ export default function AdminView({
     setBCapa('');
     setBCategoria('');
     setBTags([]);
-    setBAutor('Aura Curadoria Editorial');
+    setBAutor('Tuanny Magalhães Curadoria Editorial');
     setBSEOtitle('');
     setBSEOdescription('');
 
@@ -394,7 +394,7 @@ export default function AdminView({
       video: pVideo,
       planta: pPlanta,
       tour_virtual: pTour,
-      SEO_title: pSEOtitle || `${pTitulo} em ${pBairro} | Aura`,
+      SEO_title: pSEOtitle || `${pTitulo} em ${pBairro} | Tuanny Magalhães`,
       SEO_description: pSEOdescription || pDescricao.substring(0, 150)
     };
 
@@ -445,7 +445,7 @@ export default function AdminView({
       estagio_obra: dEstagio,
       previsao_entrega: dPrevisao,
       midia: midia.length > 0 ? midia : ['https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?auto=format&fit=crop&w=1200&q=80'],
-      SEO_title: dSEOtitle || `${dNome} ${dBairro} | Aura`,
+      SEO_title: dSEOtitle || `${dNome} ${dBairro} | Tuanny Magalhães`,
       SEO_description: dSEOdescription || dDescricao.substring(0, 150)
     };
 
@@ -540,7 +540,7 @@ export default function AdminView({
       seguranca: nSeguranca,
       perfil_publico: nPerfil,
       estilo_vida: nEstilo,
-      SEO_title: nSEOtitle || `Bairro ${nNome} de Luxo | Aura`,
+      SEO_title: nSEOtitle || `Bairro ${nNome} de Luxo | Tuanny Magalhães`,
       SEO_description: nSEOdescription || nDescricao.substring(0, 150)
     };
 
@@ -619,7 +619,7 @@ export default function AdminView({
             <Lock size={28} className="mx-auto text-[#AF9164]" />
             <h2 className="font-serif text-xl tracking-widest text-[#111111] uppercase">Acesso Reservado</h2>
             <p className="text-[10px] text-[#1A1A1A]/40 uppercase tracking-widest">
-              Digite as credenciais corporativas Aura
+              Digite as credenciais corporativas de Tuanny Magalhães
             </p>
           </div>
 
@@ -1124,7 +1124,7 @@ export default function AdminView({
                     <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
                       <div className="space-y-1">
                         <label className="text-[9px] uppercase tracking-wider text-[#1A1A1A]/55 block font-bold">SEO Title</label>
-                        <input type="text" value={pSEOtitle} onChange={(e) => setPSEOtitle(e.target.value)} placeholder="Cobertura Duplex no Leblon Exclusiva | Aura Imóveis" className="w-full bg-white border py-2.5 px-3" />
+                        <input type="text" value={pSEOtitle} onChange={(e) => setPSEOtitle(e.target.value)} placeholder="Cobertura Duplex no Leblon Exclusiva | Tuanny Magalhães Imóveis" className="w-full bg-white border py-2.5 px-3" />
                       </div>
                       <div className="space-y-1">
                         <label className="text-[9px] uppercase tracking-wider text-[#1A1A1A]/55 block font-bold">SEO Meta Description</label>
@@ -1145,7 +1145,7 @@ export default function AdminView({
                     </label>
                     <label className="flex items-center gap-3 cursor-pointer">
                       <input type="checkbox" checked={pExclusivo} onChange={() => setPExclusivo(!pExclusivo)} className="w-4 h-4" />
-                      <span>Exclusividade Exclusiva Aura</span>
+                      <span>Exclusividade Tuanny Magalhães</span>
                     </label>
                   </div>
 
@@ -1313,7 +1313,7 @@ export default function AdminView({
               <>
                 <div className="flex justify-between items-center border-b pb-4">
                   <div>
-                    <h1 className="text-2xl font-serif font-light">Editorial de Luxo Aura</h1>
+                    <h1 className="text-2xl font-serif font-light">Editorial de Luxo Tuanny Magalhães</h1>
                     <p className="text-xs text-[#1A1A1A]/40 mt-0.5">Gestão de publicações artísticas e notas de tendência</p>
                   </div>
                   <button onClick={openAddForm} className="bg-[#111111] text-white py-2.5 px-6 uppercase text-xs font-semibold tracking-wider flex items-center gap-2">

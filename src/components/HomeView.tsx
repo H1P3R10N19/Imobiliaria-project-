@@ -76,7 +76,7 @@ export default function HomeView({
       nome: ctaName,
       email: ctaEmail,
       telefone: ctaPhone,
-      mensagem: ctaMessage || 'Desejo receber assessoria imobiliária personalizada Aura para imóveis de altíssimo padrão.',
+      mensagem: ctaMessage || 'Desejo receber assessoria imobiliária personalizada de Tuanny Magalhães para imóveis de altíssimo padrão.',
       origem: 'Formulário Sessão VIP - Home CTA'
     });
     setCtaLoading(false);
@@ -257,7 +257,7 @@ export default function HomeView({
                   {/* Photo with hover zoom */}
                   <div className="relative h-72 overflow-hidden bg-zinc-900">
                     <span className="absolute top-4 left-4 z-20 bg-[#111111] text-[#E5D5C0] text-[9px] uppercase tracking-widest font-normal py-1 px-2.5">
-                      {prop.exclusivo ? 'Exclusividade Aura' : 'Curadoria Premium'}
+                      {prop.exclusivo ? 'Exclusividade Tuanny Magalhães' : 'Curadoria Premium'}
                     </span>
                     <img 
                       src={prop.midia[0] || 'https://images.unsplash.com/photo-1512917774080-9991f1c4c750'} 
@@ -516,7 +516,7 @@ export default function HomeView({
                 <div className="absolute bottom-12 -left-6 z-20 bg-[#111111] text-[#E5D5C0] border border-[#AF9164]/30 p-6 max-w-xs hidden md:block">
                   <h5 className="font-serif text-lg tracking-wide">Compromisso Ético</h5>
                   <p className="text-[10px] text-[#FAF9F5]/60 mt-2 lowercase font-light uppercase tracking-widest leading-relaxed">
-                    Nenhum imóvel ou transação realizada pela Aura é divulgada publicamente na imprensa. Total sigilo contratual assegurado.
+                    Nenhum imóvel ou transação realizada por Tuanny Magalhães é divulgada publicamente na imprensa. Total sigilo contratual assegurado.
                   </p>
                 </div>
               </div>
@@ -525,11 +525,11 @@ export default function HomeView({
               <div className="space-y-6">
                 <span className="text-xs uppercase tracking-[0.25em] text-[#AF9164] font-semibold block">Nossa Origem</span>
                 <h2 className="text-3xl md:text-4xl font-serif text-[#111111] leading-tight font-light">
-                  Aura: Alta Governança para Patrimônios Imobiliários
+                  Tuanny Magalhães: Alta Governança para Patrimônios Imobiliários
                 </h2>
                 <div className="w-16 h-[1px] bg-[#AF9164] my-2" />
                 <p className="text-sm text-[#1A1A1A]/70 leading-relaxed font-light">
-                  Fundada no Rio de Janeiro pelo corretor e conselheiro patrimonial Carlos Albuquerque, a Aura Imóveis de Luxo nasceu da necessidade de um serviço imobiliário altamente consultivo, focado em discrição, avaliação técnica de engenharia e curadoria de arte arquitetônica.
+                  Fundada no Rio de Janeiro pelo corretor e conselheiro patrimonial Carlos Albuquerque, a curadoria Tuanny Magalhães Imóveis de Luxo nasceu da necessidade de um serviço imobiliário altamente consultivo, focado em discrição, avaliação técnica de engenharia e curadoria de arte arquitetônica.
                 </p>
                 <p className="text-sm text-[#1A1A1A]/70 leading-relaxed font-light">
                   Não somos uma imobiliária de massa. Trabalhamos exclusivamente como <strong>Property Hunters</strong> e assessores sob demanda de um seleto grupo de famílias unifamiliares, grandes investidores nacionais e corporações multinacionais.
@@ -560,7 +560,7 @@ export default function HomeView({
               
               <div className="min-h-48 flex items-center justify-center">
                 <p className="text-lg md:text-2xl font-serif font-extralight tracking-wide leading-relaxed italic max-w-3xl text-[#E5D5C0]">
-                  "A contratação da assessoria privada da Aura foi crucial para a aquisição da nossa cobertura no Leblon. O sigilo comercial absoluto e a análise de Retrofit apresentada justificaram cada centavo do investimento. Uma governança impecável."
+                  "A contratação da assessoria privada de Tuanny Magalhães foi crucial para a aquisição da nossa cobertura no Leblon. O sigilo comercial absoluto e a análise de Retrofit apresentada justificaram cada centavo do investimento. Uma governança impecável."
                 </p>
               </div>
 

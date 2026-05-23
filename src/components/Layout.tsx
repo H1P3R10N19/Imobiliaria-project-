@@ -36,7 +36,7 @@ export default function Layout({ children, activePage, onNavigate, isAdmin, onLo
 
   return (
     <div id="layout-root" className="min-h-screen bg-[#FAF9F5] text-[#1A1A1A] font-sans antialiased flex flex-col selection:bg-[#C5A880] selection:text-white">
-      {/* Upper Announcement bar for Aura personalized service */}
+      {/* Upper Announcement bar for Tuanny Magalhães personalized service */}
       <div className="bg-[#111111] text-[#E5D5C0] text-xs text-center py-2 px-4 letter-spacing tracking-[0.15em] uppercase font-light border-b border-[#2C2720]/20">
         Assessoria Imobiliária Privada & Consultoria de Arte Residencial • Rio de Janeiro & Região Serrana
       </div>
@@ -51,10 +51,10 @@ export default function Layout({ children, activePage, onNavigate, isAdmin, onLo
             className="cursor-pointer group flex flex-col items-center select-none"
             id="header-logo"
           >
-            <span className="text-2xl font-light tracking-[0.3em] text-[#111111] group-hover:text-[#AF9164] transition-colors duration-500 font-serif">
-              AURA
+            <span className="text-xl font-light tracking-[0.2em] text-[#111111] group-hover:text-[#AF9164] transition-colors duration-500 font-serif">
+              Tuanny Magalhães
             </span>
-            <span className="text-[9px] tracking-[0.5em] text-[#AF9164] -mt-1 font-sans uppercase">
+            <span className="text-[9px] tracking-[0.4em] text-[#AF9164] -mt-1 font-sans uppercase">
               IMÓVEIS DE LUXO
             </span>
           </div>
@@ -148,7 +148,7 @@ export default function Layout({ children, activePage, onNavigate, isAdmin, onLo
       {mobileMenuOpen && (
         <div className="md:hidden fixed inset-0 z-50 bg-[#FAF9F5] flex flex-col justify-between p-8" id="mobile-menu">
           <div className="flex justify-between items-center">
-            <div className="text-xl font-serif tracking-[0.3em] font-light">AURA</div>
+            <div className="text-lg font-serif tracking-[0.15em] font-light uppercase">Tuanny Magalhães</div>
             <button onClick={() => setMobileMenuOpen(false)} className="text-[#111111]">
               <X size={28} />
             </button>
@@ -180,7 +180,7 @@ export default function Layout({ children, activePage, onNavigate, isAdmin, onLo
               Falar com Consultor
             </button>
             <p className="text-[10px] text-[#1A1A1A]/40 uppercase tracking-widest">
-              Aura Imóveis Exclusivos © 2026
+              Tuanny Magalhães Imóveis Exclusivos © 2026
             </p>
           </div>
         </div>
@@ -198,8 +198,8 @@ export default function Layout({ children, activePage, onNavigate, isAdmin, onLo
           {/* Logo Column */}
           <div className="space-y-4">
             <div className="flex flex-col">
-              <span className="text-3xl font-light tracking-[0.4em] font-serif">AURA</span>
-              <span className="text-[10px] tracking-[0.6em] text-[#AF9164] uppercase -mt-1">
+              <span className="text-2xl font-light tracking-[0.2em] font-serif">Tuanny Magalhães</span>
+              <span className="text-[10px] tracking-[0.4em] text-[#AF9164] uppercase -mt-1">
                 IMÓVEIS DE LUXO
               </span>
             </div>
@@ -224,7 +224,7 @@ export default function Layout({ children, activePage, onNavigate, isAdmin, onLo
           <div>
             <h4 className="text-xs font-semibold uppercase tracking-[0.25em] text-[#AF9164] mb-6">Governança</h4>
             <div className="flex flex-col space-y-3 text-xs text-[#FAF9F5]/70">
-              <button onClick={() => handleNavigation('about')} className="hover:text-[#AF9164] transition-colors text-left">Sobre a Aura</button>
+              <button onClick={() => handleNavigation('about')} className="hover:text-[#AF9164] transition-colors text-left">Sobre Tuanny Magalhães</button>
               <button onClick={() => setShowPrivacy(true)} className="hover:text-[#AF9164] transition-colors text-left">Política de Privacidade (LGPD)</button>
               <button onClick={() => setShowTerms(true)} className="hover:text-[#AF9164] transition-colors text-left">Termos de Uso e Condições</button>
               <button onClick={() => handleNavigation('admin')} className="hover:text-[#AF9164] transition-colors text-left">Área Administrativa Secreta</button>
@@ -246,18 +246,23 @@ export default function Layout({ children, activePage, onNavigate, isAdmin, onLo
               </div>
               <div className="flex items-center space-x-3">
                 <Mail size={16} className="text-[#AF9164] shrink-0" />
-                <span>contato@auraimoveis.com.br</span>
+                <span>contato@tuannymagalhaes.com.br</span>
               </div>
             </div>
           </div>
         </div>
 
         {/* Footnote and licensing */}
-        <div className="max-w-7xl mx-auto border-t border-[#E5D5C0]/10 pt-8 flex flex-col md:flex-row items-center justify-between text-[11px] text-[#FAF9F5]/45 tracking-widest uppercase font-light">
-          <p>
-            AURA IMÓVEIS PREMIUM LTDA © {new Date().getFullYear()} • TODOS OS DIREITOS RESERVADOS
-          </p>
-          <div className="flex space-x-4 mt-4 md:mt-0">
+        <div className="max-w-7xl mx-auto border-t border-[#E5D5C0]/10 pt-8 flex flex-col md:flex-row items-center justify-between text-[11px] text-[#FAF9F5]/45 tracking-widest uppercase font-light gap-4">
+          <div className="space-y-1.5 text-center md:text-left">
+            <p>
+              TUANNY MAGALHÃES IMÓVEIS PREMIUM LTDA © {new Date().getFullYear()} • TODOS OS DIREITOS RESERVADOS
+            </p>
+            <p className="text-[10px] text-[#FAF9F5]/30 tracking-[0.2em] font-light">
+              PRODUÇÃO E PROJETO POR <span className="text-[#AF9164]/70 font-normal">GABRIEL MAGALHÃES TM</span> • RESPONSÁVEL DO PROJETO
+            </p>
+          </div>
+          <div className="flex space-x-4 mt-2 md:mt-0">
             <span>Privacidade Assegurada</span>
             <span>•</span>
             <span>Segurança Criptografada</span>
@@ -281,7 +286,7 @@ export default function Layout({ children, activePage, onNavigate, isAdmin, onLo
               Política de Privacidade e Proteção de Dados (LGPD)
             </h3>
             <div className="space-y-4 text-xs text-[#1A1A1A]/80 leading-relaxed font-light">
-              <p>Optando pela excelência, a <strong>Aura Imóveis de Luxo</strong> compromete-se com a segurança extrema de suas interações e a privacidade dos seus dados pessoais, em estrito alinhamento com a <strong>Lei Geral de Proteção de Dados (Lei nº 13.709/2018)</strong>.</p>
+              <p>Optando pela excelência, a <strong>Tuanny Magalhães Imóveis de Luxo</strong> compromete-se com a segurança extrema de suas interações e a privacidade dos seus dados pessoais, em estrito alinhamento com a <strong>Lei Geral de Proteção de Dados (Lei nº 13.709/2018)</strong>.</p>
               <h5 className="font-bold uppercase tracking-wider text-[#AF9164] text-[11px]">1. Coleta e Finalidade de Dados</h5>
               <p>Os dados recolhidos através de nossos formulários de interesse VIP (Nome, endereço de e-mail e telefone) destinam-se exclusivamente ao estabelecimento de assessoria comercial direta e atendimento agendado para visitas físicas. O usuário administrativo se compromete a arquivar as informações de contatos atendidos.</p>
               <h5 className="font-bold uppercase tracking-wider text-[#AF9164] text-[11px]">2. Governança de Telemetria Anônima</h5>
@@ -311,12 +316,12 @@ export default function Layout({ children, activePage, onNavigate, isAdmin, onLo
               <X size={24} />
             </button>
             <h3 className="text-xl font-serif tracking-widest uppercase text-[#111111] mb-6 border-b border-[#AF9164]/20 pb-3">
-              Termos de Uso da Plataforma Aura
+              Termos de Uso da Plataforma Tuanny Magalhães
             </h3>
             <div className="space-y-4 text-xs text-[#1A1A1A]/80 leading-relaxed font-light">
-              <p>Seja bem-vindo à refinada plataforma digital da <strong>Aura Imóveis de Luxo</strong>. Ao navegar e submeter manifestações de interesse nesta plataforma, o usuário concorda irrestritamente com os termos de governança e uso aqui pactuados.</p>
+              <p>Seja bem-vindo à refinada plataforma digital da <strong>Tuanny Magalhães Imóveis de Luxo</strong>. Ao navegar e submeter manifestações de interesse nesta plataforma, o usuário concorda irrestritamente com os termos de governança e uso aqui pactuados.</p>
               <h5 className="font-bold uppercase tracking-wider text-[#AF9164] text-[11px]">1. Direitos sobre o Conteúdo e Marcas</h5>
-              <p>Todos os materiais expostos (arquiteturas virtuais, fotos autorais, descrições comerciais premium de alta autoria literária e layouts visuais minimalistas) são de propriedade intelectual exclusiva da Aura ou de seus licenciadores, sendo rigorosamente proibida qualquer cópia desautorizada ou reprodução automatizada.</p>
+              <p>Todos os materiais expostos (arquiteturas virtuais, fotos autorais, descrições comerciais premium de alta autoria literária e layouts visuais minimalistas) são de propriedade intelectual exclusiva de Tuanny Magalhães ou de seus licenciadores, sendo rigorosamente proibida qualquer cópia desautorizada ou reprodução automatizada.</p>
               <h5 className="font-bold uppercase tracking-wider text-[#AF9164] text-[11px]">2. Agendamentos de Visitas e Propostas</h5>
               <p>As propostas e visitas físicas coordenadas através de nosso canal virtual estão sujeitas a triagem por parte de nosso responsável comercial, dependendo da documentação legal e confirmação de exclusividade das unidades de altíssimo padrão envolvidas.</p>
             </div>

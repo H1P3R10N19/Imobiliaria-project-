@@ -43,7 +43,7 @@ const INITIAL_BAIRROS: Neighborhood[] = [
     seguranca: 'Monitoramento constante e policiamento privado nas ruas residenciais mais nobres.',
     perfil_publico: 'Famílias tradicionais, empresários de elite, diplomatas e intelectuais renomados.',
     estilo_vida: 'Sofisticado, saudável e ao ar livre, aliando o dinamismo urbano à brisa do oceano Atlântico.',
-    SEO_title: 'Imóveis de Luxo no Leblon | Aura Imóveis Premium',
+    SEO_title: 'Imóveis de Luxo no Leblon | Tuanny Magalhães Imóveis Premium',
     SEO_description: 'Descubra coberturas exclusivas e apartamentos de alto padrão no Leblon. Curadoria especializada para quem busca exclusividade.'
   },
   {
@@ -64,7 +64,7 @@ const INITIAL_BAIRROS: Neighborhood[] = [
     seguranca: 'Guarita de controle de acesso 24h e segurança comunitária de altíssimo nível.',
     perfil_publico: 'Celebridades, pioneiros criativos, investidores internacionais e entusiastas da arquitetura premium.',
     estilo_vida: 'Privado, contemplativo e focado em bem-estar e contato direto com a imensidão do oceano.',
-    SEO_title: 'Mansões no Joá com Vista Mar | Aura Imóveis Premium',
+    SEO_title: 'Mansões no Joá com Vista Mar | Tuanny Magalhães Imóveis Premium',
     SEO_description: 'Explore mansões luxuosas no Joá com heliponto, piscina de borda infinita e segurança blindada individual.'
   },
   {
@@ -85,7 +85,7 @@ const INITIAL_BAIRROS: Neighborhood[] = [
     seguranca: 'Patrulhamento ostensivo e segurança profissional particular em condomínios unificados.',
     perfil_publico: 'Colecionadores de arte, jovens executivos internacionais e famílias refinadas de perfil cosmopolita.',
     estilo_vida: 'Vibrante, elegante, culturalmente estimulante e sintonizado com tendências globais de design urbano.',
-    SEO_title: 'Apartamentos e Coberturas em Ipanema | Aura Imóveis Premium',
+    SEO_title: 'Apartamentos e Coberturas em Ipanema | Tuanny Magalhães Imóveis Premium',
     SEO_description: 'Luxuosos apartamentos lineares e coberturas duplex na Avenida Vieira Souto, em Ipanema. Luxo incomparável.'
   },
   {
@@ -106,7 +106,7 @@ const INITIAL_BAIRROS: Neighborhood[] = [
     seguranca: 'Excelente índice de segurança devido à presença residencial consolidada e acessos controlados.',
     perfil_publico: 'Artistas, diplomatas, arquitetos renomados e famílias de prestígio que preferem contato íntimo com a natureza.',
     estilo_vida: 'Sereno, orgânico, focado em silêncio, ar puro, privacidade e elegância discreta.',
-    SEO_title: 'Imóveis no Jardim Botânico com Vista Verde | Aura',
+    SEO_title: 'Imóveis no Jardim Botânico com Vista Verde | Tuanny Magalhães',
     SEO_description: 'Selecione casas históricas e coberturas exclusivas com vista para o Cristo Redentor no tranquilo Jardim Botânico.'
   },
   {
@@ -126,7 +126,7 @@ const INITIAL_BAIRROS: Neighborhood[] = [
     seguranca: 'Condomínios fechados horizontais de segurança máxima militarizada e rondas motorizadas 24 horas.',
     perfil_publico: 'Famílias tradicionais, colecionadores de vinhos, velejadores que buscam a calma da serra e CEOs aposentados.',
     estilo_vida: 'Luxuoso de inverno, focado em lareiras, alta gastronomia, privacidade absoluta e belíssimos finais de semana.',
-    SEO_title: 'Casas de Campo de Luxo em Itaipava | Aura',
+    SEO_title: 'Casas de Campo de Luxo em Itaipava | Tuanny Magalhães',
     SEO_description: 'Encontre mansões rústicas-modernas e chácaras espetaculares nos condomínios mais exclusivos de Itaipava.'
   }
 ];
@@ -164,7 +164,7 @@ const INITIAL_PROPERTIES: Property[] = [
     ],
     video: 'https://www.youtube.com/embed/dQw4w9WgXcQ',
     planta: 'https://images.unsplash.com/photo-1600566753376-12c8ab7fb75b?auto=format&fit=crop&w=600&q=80',
-    tour_virtual: 'https://my.matterport.com/show/?m=AuraPremium',
+    tour_virtual: 'https://my.matterport.com/show/?m=Tuanny MagalhãesPremium',
     SEO_title: 'Cobertura Triplex de Luxo no Leblon | Venda Exclusiva',
     SEO_description: 'Magnífica cobertura triplex de 680m² na quadra da praia do Leblon. Vista deslumbrante 360°, piscina de borda infinita e acabamentos importados de altíssimo padrão.',
     criado_em: '2026-04-10T11:00:00Z',
@@ -205,7 +205,7 @@ const INITIAL_PROPERTIES: Property[] = [
     video: '',
     planta: '',
     tour_virtual: '',
-    SEO_title: 'Mansão Suspensa no Joá - Vista Mar e Heliponto | Aura',
+    SEO_title: 'Mansão Suspensa no Joá - Vista Mar e Heliponto | Tuanny Magalhães',
     SEO_description: 'Exuberante mansão à venda no Joá. Arquitetura suspensa premiada, 950m² de área construída, piscina infinita sobre a Praia da Joatinga.',
     criado_em: '2026-04-18T14:20:00Z',
     atualizado_em: '2026-05-22T09:15:00Z',
@@ -283,7 +283,7 @@ const INITIAL_PROPERTIES: Property[] = [
     video: '',
     planta: '',
     tour_virtual: '',
-    SEO_title: 'Casa de Vidro Contemporânea no Jardim Botânico | Aura',
+    SEO_title: 'Casa de Vidro Contemporânea no Jardim Botânico | Tuanny Magalhães',
     SEO_description: 'Maravilhosa casa contemporânea integrada à Mata Atlântica no Jardim Botânico. Projeto Arthur Casas de 580m² com vista privativa e piscina Hijau.',
     criado_em: '2026-05-12T16:00:00Z',
     atualizado_em: '2026-05-23T01:00:00Z',
@@ -322,7 +322,7 @@ const INITIAL_PROPERTIES: Property[] = [
     video: '',
     planta: '',
     tour_virtual: '',
-    SEO_title: 'Casa para Reforma à Venda de Luxo no Leblon | Aura',
+    SEO_title: 'Casa para Reforma à Venda de Luxo no Leblon | Tuanny Magalhães',
     SEO_description: 'Rara joia arquitetônica dos anos 50 à venda no Leblon. Casa unifamiliar em centro de terreno plano de 600m² perfeita para reforma residencial de alto padrão.',
     criado_em: '2026-05-15T10:30:00Z',
     atualizado_em: '2026-05-15T10:30:00Z',
@@ -361,7 +361,7 @@ const INITIAL_PROPERTIES: Property[] = [
     video: '',
     planta: '',
     tour_virtual: '',
-    SEO_title: 'Chácara de Altíssimo Luxo à Venda em Itaipava | Aura',
+    SEO_title: 'Chácara de Altíssimo Luxo à Venda em Itaipava | Tuanny Magalhães',
     SEO_description: 'Chácara luxuosa em condomínio de Itaipava Petrópolis. 20.000m² de terreno, quadra de tênis particular, cocheiras e adega de rocha climatizada.',
     criado_em: '2026-05-18T08:00:00Z',
     atualizado_em: '2026-05-23T00:30:00Z',
@@ -400,7 +400,7 @@ const INITIAL_PROPERTIES: Property[] = [
     video: '',
     planta: '',
     tour_virtual: '',
-    SEO_title: 'Locação de Mansão de Luxo no Joá temporária | Aura',
+    SEO_title: 'Locação de Mansão de Luxo no Joá temporária | Tuanny Magalhães',
     SEO_description: 'Magnífica mansão decorada de luxo no Joá para aluguel. Hidromassagem, rooftop gourmet, sauna com vista mar e 4 suítes completas de alto padrão.',
     criado_em: '2026-05-20T11:00:00Z',
     atualizado_em: '2026-05-22T14:00:00Z',
@@ -427,13 +427,13 @@ const INITIAL_DEVELOPMENTS: Development[] = [
       'https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?auto=format&fit=crop&w=1200&q=80',
       'https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=format&fit=crop&w=1200&q=80'
     ],
-    SEO_title: 'Leblon Signature Residences | Lançamento Imobiliário Aura',
+    SEO_title: 'Leblon Signature Residences | Lançamento Imobiliário Tuanny Magalhães',
     SEO_description: 'Exclusivo lançamento residencial de grife no Leblon Signature Residences. Apartamentos e coberturas duplex de alto luxo com amplas plantas.',
     visualizacoes: 350
   },
   {
     id: 'dev-2',
-    nome: 'Aura Botanical Jardim de Luxo',
+    nome: 'Botanical Jardim de Luxo',
     slug: 'aura-botanical-jardim',
     descricao: 'Lançamento residencial sofisticado no Jardim Botânico, projetado para se integrar na topologia natural da colina. Com concreto canelado, terraços gramados em balanço e amplos painéis móveis de brise de madeira nobre de lei, as unidades respiram o ar fresco da floresta carioca enquanto ostentam acabamentos impecáveis de mármore.',
     bairro: 'Jardim Botânico',
@@ -448,8 +448,8 @@ const INITIAL_DEVELOPMENTS: Development[] = [
       'https://images.unsplash.com/photo-1513694203232-719a280e022f?auto=format&fit=crop&w=1200&q=80',
       'https://images.unsplash.com/photo-1512917774080-9991f1c4c750?auto=format&fit=crop&w=1200&q=80'
     ],
-    SEO_title: 'Aura Botanical Jardim Botânico - Empreendimento Exclusivo',
-    SEO_description: 'Aura Botanical Jardim Botânico. Apartamentos de luxo integrados com a vegetação. Entrega em 2027. Terraços privativos e piscina verde Hijau.',
+    SEO_title: 'Botanical Jardim Botânico - Empreendimento Exclusivo',
+    SEO_description: 'Botanical Jardim Botânico. Apartamentos de luxo integrados com a vegetação. Entrega em 2027. Terraços privativos e piscina verde Hijau.',
     visualizacoes: 290
   }
 ];
@@ -463,8 +463,8 @@ const INITIAL_BLOG_POSTS: BlogPost[] = [
     imagem_destacada: 'https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?auto=format&fit=crop&w=1250&q=80',
     categoria: 'Tendências de Arquitetura',
     tags: ['Arquitetura Minimalista', 'Imóveis de Luxo', 'Design de Interiores Premium', 'Curadoria Atemporal'],
-    autor: 'Aura Curadoria Editorial',
-    SEO_title: 'Arquitetura Minimalista nos Imóveis de Luxo | Blog Aura',
+    autor: 'Tuanny Magalhães Curadoria Editorial',
+    SEO_title: 'Arquitetura Minimalista nos Imóveis de Luxo | Blog Tuanny Magalhães',
     SEO_description: 'Análise aprofundada dos conceitos de luxo silencioso e minimalismo arquitetônico nas mansões contemporâneas e coberturas de altíssimo padrão.',
     publicado_em: '2026-05-18T10:00:00Z',
     visualizacoes: 245
@@ -477,8 +477,8 @@ const INITIAL_BLOG_POSTS: BlogPost[] = [
     imagem_destacada: 'https://images.unsplash.com/photo-1512917774080-9991f1c4c750?auto=format&fit=crop&w=1250&q=80',
     categoria: 'Estilo de Vida',
     tags: ['Mercado Premium Rio', 'Leblon e Ipanema', 'Joá Mansões', 'Jardim Botânico Luxo'],
-    autor: 'Aura Curadoria Editorial',
-    SEO_title: 'Bairros Nobres de Luxo no Rio de Janeiro | Blog Aura',
+    autor: 'Tuanny Magalhães Curadoria Editorial',
+    SEO_title: 'Bairros Nobres de Luxo no Rio de Janeiro | Blog Tuanny Magalhães',
     SEO_description: 'Um guia completo e poético dos bairros de elite do Rio de Janeiro: Leblon, Ipanema, Jardim Botânico e as falésias privadas do Joá.',
     publicado_em: '2026-05-20T14:30:00Z',
     visualizacoes: 189
@@ -491,8 +491,8 @@ const INITIAL_BLOG_POSTS: BlogPost[] = [
     imagem_destacada: 'https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=format&fit=crop&w=1250&q=80',
     categoria: 'Investimento e Reforma',
     tags: ['Retrofit Imobiliário', 'Reforma de Alto Padrão', 'Apartamentos Vieira Souto', 'Investimento Consciente'],
-    autor: 'Aura Curadoria Editorial',
-    SEO_title: 'Retrofit de Luxo e Reformas Estruturais | Blog Aura',
+    autor: 'Tuanny Magalhães Curadoria Editorial',
+    SEO_title: 'Retrofit de Luxo e Reformas Estruturais | Blog Tuanny Magalhães',
     SEO_description: 'Entenda como reformar e repaginar apartamentos e casas antigas em locais nobres do Rio pode gerar alta lucratividade e curadoria residencial de topo.',
     publicado_em: '2026-05-22T09:00:00Z',
     visualizacoes: 134

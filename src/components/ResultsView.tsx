@@ -130,7 +130,7 @@ export default function ResultsView({ properties, initialFilters, onNavigate }: 
       
       {/* Title Header */}
       <div className="mb-12 space-y-2 border-b border-[#1A1A1A]/5 pb-6">
-        <span className="text-[10px] uppercase tracking-[0.3em] text-[#AF9164] font-medium">Portfólio Aura</span>
+        <span className="text-[10px] uppercase tracking-[0.3em] text-[#AF9164] font-medium">Portfólio Tuanny Magalhães</span>
         <h1 className="text-3xl font-serif font-light text-[#111111]">Encontre sua Residência Ideal</h1>
         <p className="text-xs text-[#1A1A1A]/50 font-light uppercase tracking-wider">
           Exibindo {sortedProperties.length} {sortedProperties.length === 1 ? 'imóvel selecionado' : 'imóveis selecionados'} de alto padrão
@@ -349,7 +349,7 @@ export default function ResultsView({ properties, initialFilters, onNavigate }: 
                 onChange={() => setExclusivo(!exclusivo)}
                 className="text-[#AF9164] focus:ring-[#AF9164] border-gray-300 w-4 h-4 rounded-none"
               />
-              <span>Exclusividade Aura</span>
+              <span>Exclusividade Tuanny Magalhães</span>
             </label>
 
             <label className="flex items-center gap-3 text-xs text-[#1A1A1A]/70 cursor-pointer">
@@ -392,7 +392,7 @@ export default function ResultsView({ properties, initialFilters, onNavigate }: 
                   <div className="relative h-64 overflow-hidden bg-zinc-900 shrink-0">
                     {prop.exclusivo && (
                       <span className="absolute top-4 left-4 z-20 bg-[#111111] text-[#E5D5C0] text-[8px] uppercase tracking-widest font-normal py-1 px-2.5">
-                        Exclusividade Aura
+                        Exclusividade Tuanny Magalhães
                       </span>
                     )}
                     {prop.imovel_para_reforma && (
@@ -588,7 +588,7 @@ export default function ResultsView({ properties, initialFilters, onNavigate }: 
                     onChange={() => setExclusivo(!exclusivo)}
                     className="text-[#AF9164]"
                   />
-                  <span>Exclusividade Aura</span>
+                  <span>Exclusividade Tuanny Magalhães</span>
                 </label>
               </div>
             </div>

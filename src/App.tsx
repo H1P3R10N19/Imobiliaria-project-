@@ -190,8 +190,8 @@ export default function App() {
       <div className="min-h-screen bg-[#FAF9F5] flex flex-col items-center justify-center p-6 space-y-4 font-light text-[#1A1A1A]">
         <RefreshCw size={40} className="text-[#AF9164] animate-spin" />
         <div className="text-center space-y-1 select-none">
-          <span className="text-xl tracking-[0.4em] uppercase font-serif">AURA</span>
-          <span className="text-[9px] tracking-[0.5em] text-[#AF9164] block font-sans">IMÓVEIS DE LUXO</span>
+          <span className="text-xl tracking-[0.2em] uppercase font-serif">Tuanny Magalhães</span>
+          <span className="text-[9px] tracking-[0.4em] text-[#AF9164] block font-sans">IMÓVEIS DE LUXO</span>
         </div>
         <p className="text-[11px] uppercase tracking-widest text-zinc-400">Restaurando Governança Patrimonial...</p>
       </div>

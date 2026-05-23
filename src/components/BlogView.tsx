@@ -37,7 +37,7 @@ export default function BlogView({ blogPosts, onNavigate }: BlogViewProps) {
         <span className="text-xs uppercase tracking-[0.3em] text-[#AF9164] font-semibold block flex items-center justify-center gap-2">
           <BookOpen size={14} /> Curadoria de Conteúdo
         </span>
-        <h1 className="text-3xl md:text-5xl font-serif text-[#111111] leading-tight font-light">Aura Editorial de Luxo</h1>
+        <h1 className="text-3xl md:text-5xl font-serif text-[#111111] leading-tight font-light">Tuanny Magalhães Editorial de Luxo</h1>
         <div className="w-12 h-[1px] bg-[#AF9164] mx-auto mt-4" />
         <p className="text-xs text-[#1A1A1A]/55 font-light leading-relaxed">
           Tendências globais de arquitetura minimalista, investimentos de retrofit e guias aprofundados sobre a alta cultura imobiliária no Rio de Janeiro.
