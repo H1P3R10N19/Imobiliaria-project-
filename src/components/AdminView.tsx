@@ -163,7 +163,7 @@ export default function AdminView({
         trackEvent('page_view', '/admin', 'Admin Login Successful');
       }
     } catch (err: any) {
-      setAuthError(err.message || 'Credenciais inválidas. Tente admin@aura.com.br / admin123');
+      setAuthError(err.message || 'Credenciais inválidas. Tente admin@imobiliaria.com / Admin123@');
     } finally {
       setAuthLoading(false);
     }
@@ -638,7 +638,7 @@ export default function AdminView({
                 required
                 value={email}
                 onChange={(e) => setEmail(e.target.value)}
-                placeholder="admin@aura.com.br"
+                placeholder="admin@imobiliaria.com"
                 className="w-full bg-[#FAF9F5] border border-[#1A1A1A]/10 text-xs py-3 px-3 focus:outline-none"
               />
             </div>

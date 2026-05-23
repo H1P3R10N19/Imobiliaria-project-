@@ -40,6 +40,9 @@ export default function App() {
   const loadDatabase = async () => {
     try {
       setLoading(true);
+      setError('');
+      
+      // Carregar apenas os dados públicos primordiais de forma paralela
       const [propsData, devsData, neighborhoodsData, blogsData, modulesData] = await Promise.all([
         api.getProperties(),
         api.getDevelopments(),
@@ -54,19 +57,29 @@ export default function App() {
       setBlogPosts(blogsData || []);
       setHomeModules(modulesData || []);
 
-      // If already authenticated, read leads
-      const user = await api.me();
-      if (user) {
-        setIsAdmin(true);
-        const fetchedLeads = await api.getLeads();
-        setLeads(fetchedLeads || []);
+      // Verificar autenticação opcional do administrador de forma silenciosa e segura
+      const token = localStorage.getItem('aura_admin_token');
+      if (token) {
+        try {
+          const user = await api.me();
+          if (user) {
+            setIsAdmin(true);
+            const fetchedLeads = await api.getLeads();
+            setLeads(fetchedLeads || []);
+          } else {
+            setIsAdmin(false);
+          }
+        } catch (authError) {
+          // Token inválido/expirado, limpa-o de forma silenciosa sem quebrar a Home pública
+          setIsAdmin(false);
+          localStorage.removeItem('aura_admin_token');
+        }
       } else {
         setIsAdmin(false);
       }
-      
-      setError('');
     } catch (err: any) {
-      setError(err?.message || 'Erro ao sintonizar base de dados premium.');
+      // Mensagem amigável de erro
+      setError('Erro ao carregar dados. Tente novamente.');
     } finally {
       setLoading(false);
     }
@@ -190,14 +203,14 @@ export default function App() {
     return (
       <div className="min-h-screen bg-[#FAF9F5] flex flex-col items-center justify-center p-8 font-light text-[#1a1a1a]">
         <div className="bg-white p-8 max-w-md w-full border border-red-800/20 text-center space-y-4 shadow-xl">
-          <AlertCircle size={48} className="text-red-800 mx-auto" />
-          <h2 className="font-serif text-lg font-normal">Falha Técnica Síncrona</h2>
+          <AlertCircle size={48} className="text-red-700 mx-auto" />
+          <h2 className="font-serif text-lg font-normal">Aviso</h2>
           <p className="text-xs text-[#1A1A1A]/70 leading-relaxed font-light">{error}</p>
           <button 
             onClick={loadDatabase}
             className="w-full bg-[#111111] hover:bg-[#AF9164] text-white py-3 text-xs font-bold uppercase tracking-widest transition-colors rounded-none"
           >
-            Sintonizar Novamente
+            Tentar novamente
           </button>
         </div>
       </div>

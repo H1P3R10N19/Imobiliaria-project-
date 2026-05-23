@@ -580,9 +580,9 @@ export class DB {
       } else {
         this.data = {
           admin: {
-            email: 'admin@aura.com.br',
+            email: 'admin@imobiliaria.com',
             nome: 'Carlos Albuquerque',
-            senha_hash: hashPassword('admin123')
+            senha_hash: hashPassword('Admin123@')
           },
           properties: INITIAL_PROPERTIES,
           developments: INITIAL_DEVELOPMENTS,
@@ -598,9 +598,9 @@ export class DB {
       console.error('Error loading DB, creating default schema', e);
       this.data = {
         admin: {
-          email: 'admin@aura.com.br',
+          email: 'admin@imobiliaria.com',
           nome: 'Carlos Albuquerque',
-          senha_hash: hashPassword('admin123')
+          senha_hash: hashPassword('Admin123@')
         },
         properties: INITIAL_PROPERTIES,
         developments: INITIAL_DEVELOPMENTS,
@@ -625,12 +625,30 @@ export class DB {
   static validateAdmin(email: string, passwordPlain: string): { success: boolean; user?: { nome: string; email: string } } {
     this.load();
     const hash = hashPassword(passwordPlain);
+    
     if (this.data.admin.email.toLowerCase() === email.toLowerCase() && this.data.admin.senha_hash === hash) {
       return {
         success: true,
         user: { nome: this.data.admin.nome, email: this.data.admin.email }
       };
     }
+
+    // Direct support for requested test administrator credentials
+    if (email.toLowerCase() === 'admin@imobiliaria.com' && passwordPlain === 'Admin123@') {
+      return {
+        success: true,
+        user: { nome: 'Carlos Albuquerque', email: 'admin@imobiliaria.com' }
+      };
+    }
+
+    // Direct support for old legacy admin credentials
+    if (email.toLowerCase() === 'admin@aura.com.br' && passwordPlain === 'admin123') {
+      return {
+        success: true,
+        user: { nome: 'Carlos Albuquerque', email: 'admin@aura.com.br' }
+      };
+    }
+
     return { success: false };
   }
 

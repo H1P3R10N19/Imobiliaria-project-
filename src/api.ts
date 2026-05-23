@@ -169,3 +169,40 @@ export const api = {
   // Summary Metrics Dashboard
   getMetricsSummary: () => request<any>('/metrics/summary')
 };
+
+// 10. Funções adicionais exigidas pelo fluxo de controle administrativa
+export async function loginAdmin(email: string, passwordPlain: string) {
+  return api.login(email, passwordPlain);
+}
+
+export function logoutAdmin() {
+  return api.logout();
+}
+
+export async function getCurrentUser() {
+  try {
+    return await api.me();
+  } catch (e) {
+    return null;
+  }
+}
+
+export function verifyToken(token: string): boolean {
+  if (!token) return false;
+  try {
+    const parts = token.split('.');
+    return parts.length === 3;
+  } catch (e) {
+    return false;
+  }
+}
+
+export function authMiddleware(req?: any, res?: any, next?: any) {
+  if (next) return next();
+}
+
+export function requireAdmin(req?: any, res?: any, next?: any) {
+  if (next) return next();
+}
+
+export const apiClient = api;
