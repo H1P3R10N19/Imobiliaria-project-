@@ -163,7 +163,8 @@ export default function AdminView({
         trackEvent('page_view', '/admin', 'Admin Login Successful');
       }
     } catch (err: any) {
-      setAuthError(err.message || 'Credenciais inválidas. Tente admin@imobiliaria.com / Admin123@');
+      // Professional server and offline messages
+      setAuthError(err.message || 'E-mail ou senha inválidos.');
     } finally {
       setAuthLoading(false);
     }
@@ -663,10 +664,6 @@ export default function AdminView({
               {authLoading ? 'CONECTANDO...' : 'REIVINDICAR ACESSO'}
             </button>
           </form>
-
-          <p className="text-center text-[10px] text-[#1A1A1A]/35 tracking-wider uppercase mt-8 block">
-            Dica: admin@aura.com.br • admin123
-          </p>
         </div>
       </div>
     );

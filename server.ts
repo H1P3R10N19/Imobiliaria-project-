@@ -139,19 +139,36 @@ app.use('/api/metrics', (req, res, next) => {
 app.post('/api/auth/login', (req, res) => {
   const { email, password } = req.body;
   if (!email || !password) {
-    return res.status(400).json({ error: 'Email e senha são obrigatórios.' });
+    return res.status(400).json({ error: 'E-mail e senha são obrigatórios.' });
   }
 
-  const result = DB.validateAdmin(email, password);
-  if (result.success && result.user) {
+  // Get administrative credentials from environment variables or solid defaults
+  const envEmail = process.env.ADMIN_EMAIL || 'admin@aura.com.br';
+  const envPassword = process.env.ADMIN_PASSWORD || 'senha_segura_aqui';
+
+  let loginSuccess = false;
+  let loggedUser = { email: envEmail, nome: 'Administrador Aura', role: 'admin' };
+
+  if (email.toLowerCase() === envEmail.toLowerCase() && password === envPassword) {
+    loginSuccess = true;
+  } else {
+    // Fallback to database models
+    const result = DB.validateAdmin(email, password);
+    if (result.success && result.user) {
+      loginSuccess = true;
+      loggedUser = { email: result.user.email, nome: result.user.nome, role: 'admin' };
+    }
+  }
+
+  if (loginSuccess) {
     const token = signToken({ 
-      email: result.user.email, 
-      nome: result.user.nome, 
+      email: loggedUser.email, 
+      nome: loggedUser.nome, 
       role: 'admin', 
       exp: Date.now() + 24 * 60 * 60 * 1000 // 24 horas
     });
 
-    // 11. Definir cookie HttpOnly
+    // Definir cookie HttpOnly
     res.cookie('aura_admin_token', token, {
       httpOnly: true,
       secure: process.env.NODE_ENV === 'production',
@@ -160,12 +177,21 @@ app.post('/api/auth/login', (req, res) => {
     });
 
     return res.json({
+      success: true,
       token,
-      user: result.user
+      user: {
+        email: loggedUser.email,
+        role: 'admin'
+      }
     });
   } else {
-    return res.status(401).json({ error: 'Credenciais inválidas.' });
+    return res.status(401).json({ error: 'E-mail ou senha inválidos.' });
   }
+});
+
+app.post('/api/auth/logout', (req, res) => {
+  res.clearCookie('aura_admin_token');
+  return res.json({ success: true });
 });
 
 app.get('/api/auth/me', (req, res) => {

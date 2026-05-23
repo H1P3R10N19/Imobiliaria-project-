@@ -111,7 +111,13 @@ export default function App() {
   const parseHash = (): PageState => {
     const hash = window.location.hash || '#home';
     const [route, query] = hash.split('?');
-    const type = (route.replace('#', '') || 'home') as PageState['type'];
+    let type = (route.replace('#', '') || 'home') as PageState['type'];
+    
+    // Normalize administrative sub-hashes to map directly into the secure admin case
+    if (String(type).startsWith('admin')) {
+      type = 'admin';
+    }
+
     const params: any = {};
     if (query) {
       query.split('&').forEach(part => {
