@@ -14,6 +14,13 @@ import AdminView from './components/AdminView';
 import { api, trackEvent } from './api';
 import { Property, Development, Neighborhood, BlogPost, Lead, HomeModuleConfig, AdminUser } from './types';
 import { RefreshCw, AlertCircle } from 'lucide-react';
+import {
+  FALLBACK_PROPERTIES,
+  FALLBACK_DEVELOPMENTS,
+  FALLBACK_NEIGHBORHOODS,
+  FALLBACK_BLOG_POSTS,
+  FALLBACK_HOME_MODULES
+} from './fallbackData';
 
 interface PageState {
   type: 'home' | 'results' | 'property' | 'development' | 'neighborhoods' | 'neighborhood' | 'blog' | 'blog-post' | 'about' | 'admin';
@@ -35,54 +42,64 @@ export default function App() {
   // Telemetry indicators
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState('');
+  const [isOffline, setIsOffline] = useState(false);
 
   // Sincronizar banco de dados local
   const loadDatabase = async () => {
-    try {
-      setLoading(true);
-      setError('');
-      
-      // Carregar apenas os dados públicos primordiais de forma paralela
-      const [propsData, devsData, neighborhoodsData, blogsData, modulesData] = await Promise.all([
-        api.getProperties(),
-        api.getDevelopments(),
-        api.getNeighborhoods(),
-        api.getBlogPosts(),
-        api.getHomeModules()
-      ]);
+    setLoading(true);
+    setError('');
+    let failedAPI = false;
 
-      setProperties(propsData || []);
-      setDevelopments(devsData || []);
-      setNeighborhoods(neighborhoodsData || []);
-      setBlogPosts(blogsData || []);
-      setHomeModules(modulesData || []);
-
-      // Verificar autenticação opcional do administrador de forma silenciosa e segura
-      const token = localStorage.getItem('aura_admin_token');
-      if (token) {
-        try {
-          const user = await api.me();
-          if (user) {
-            setIsAdmin(true);
-            const fetchedLeads = await api.getLeads();
-            setLeads(fetchedLeads || []);
-          } else {
-            setIsAdmin(false);
-          }
-        } catch (authError) {
-          // Token inválido/expirado, limpa-o de forma silenciosa sem quebrar a Home pública
-          setIsAdmin(false);
-          localStorage.removeItem('aura_admin_token');
+    // Helper functions to fetch with fallback
+    const fetchWithFallback = async <T extends unknown>(apiCall: () => Promise<T>, fallback: T, name: string): Promise<T> => {
+      try {
+        const data = await apiCall();
+        if (data === undefined || data === null) {
+          throw new Error(`Data imported from API ${name} was null or undefined`);
         }
-      } else {
-        setIsAdmin(false);
+        return data;
+      } catch (err) {
+        console.error(`[API FALLBACK] Failed to load ${name}. Using static curated records.`, err);
+        failedAPI = true;
+        return fallback;
       }
-    } catch (err: any) {
-      // Mensagem amigável de erro
-      setError('Erro ao carregar dados. Tente novamente.');
-    } finally {
-      setLoading(false);
+    };
+
+    const propsData = await fetchWithFallback(api.getProperties, FALLBACK_PROPERTIES, 'Properties');
+    const devsData = await fetchWithFallback(api.getDevelopments, FALLBACK_DEVELOPMENTS, 'Developments');
+    const neighborhoodsData = await fetchWithFallback(api.getNeighborhoods, FALLBACK_NEIGHBORHOODS, 'Neighborhoods');
+    const blogsData = await fetchWithFallback(api.getBlogPosts, FALLBACK_BLOG_POSTS, 'Blog Posts');
+    const modulesData = await fetchWithFallback(api.getHomeModules, FALLBACK_HOME_MODULES, 'Home Modules');
+
+    setProperties(propsData);
+    setDevelopments(devsData);
+    setNeighborhoods(neighborhoodsData);
+    setBlogPosts(blogsData);
+    setHomeModules(modulesData);
+    setIsOffline(failedAPI);
+
+    // Verificar autenticação opcional do administrador de forma silenciosa e segura
+    const token = localStorage.getItem('aura_admin_token');
+    if (token) {
+      try {
+        const user = await api.me();
+        if (user) {
+          setIsAdmin(true);
+          const fLeads = await api.getLeads();
+          setLeads(fLeads || []);
+        } else {
+          setIsAdmin(false);
+        }
+      } catch (authError) {
+        // Token inválido/expirado, limpa-o de forma silenciosa sem quebrar a Home pública
+        setIsAdmin(false);
+        localStorage.removeItem('aura_admin_token');
+      }
+    } else {
+      setIsAdmin(false);
     }
+    
+    setLoading(false);
   };
 
   // Synchronize layout elements on refresh
@@ -330,6 +347,17 @@ export default function App() {
       isAdmin={isAdmin}
       onLogout={handleLogout}
     >
+      {isOffline && (
+        <div className="bg-[#AF9164]/10 text-[#AF9164] text-[10px] md:text-xs py-3 px-6 text-center tracking-widest font-light border-b border-[#AF9164]/10 flex flex-wrap justify-center items-center gap-x-4 gap-y-1 transition-all select-none">
+          <span>SISTEMA AUTOMÁTICO DE SEGURANÇA: EXIBINDO CURADORIA DO ACERVO DE BACKUP</span>
+          <button 
+            onClick={loadDatabase} 
+            className="underline hover:text-[#111111] uppercase font-bold cursor-pointer transition-colors decoration-[#AF9164] underline-offset-4"
+          >
+            Tentar Reconectar
+          </button>
+        </div>
+      )}
       {renderPageContent()}
     </Layout>
   );
